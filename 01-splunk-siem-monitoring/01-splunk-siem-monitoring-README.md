@@ -42,8 +42,8 @@ index=botsv2 [search terms]
 
 ## Findings
 
-- [Finding 1 — Identifies which source IP addresses are generating the highest volume of HTTP traffic — useful for spotting a single host or external IP responsible for an unusually large share of activity, a common indicator of scanning, beaconing, or compromised hosts.]
-- [Finding 2 - Plots total event volume over time in hourly buckets, making sudden spikes or drops visible at a glance. A sharp, isolated spike — like the one in your screenshot around Aug 7 — often indicates a burst of automated activity (a scan, an attack, or a bulk data transfer) rather than normal user behavior, and is usually the first thing worth investigating further.]
+- Finding 1 — Identifies which source IP addresses are generating the highest volume of HTTP traffic — useful for spotting a single host or external IP responsible for an unusually large share of activity, a common indicator of scanning, beaconing, or compromised hosts.
+- Finding 2 - Plots total event volume over time in hourly buckets, making sudden spikes or drops visible at a glance. A sharp, isolated spike — like the one in your screenshot around Aug 7 — often indicates a burst of automated activity (a scan, an attack, or a bulk data transfer) rather than normal user behavior, and is usually the first thing worth investigating further.
 
 
 ## Dashboard
@@ -60,4 +60,4 @@ Dashboard overview: top source IPs, HTTP status code distribution, traffic volum
 
 ## Reflection
 
-[The hardest part was field discovery — figuring out which raw field actually mapped to "source IP" or "account name" across different sourcetypes, since BOTSv2 has inconsistent naming and some fields only appear after expanding specific event types. With more time, I'd build a quick field-mapping reference up front before touching any panels, instead of discovering inconsistencies mid-build and having to backtrack on queries I'd already written.]
+The hardest part was field discovery — figuring out which raw field actually mapped to "source IP" or "account name" across different sourcetypes, since BOTSv2 has inconsistent naming and some fields only appear after expanding specific event types. With more time, I'd build a quick field-mapping reference up front before touching any panels, instead of discovering inconsistencies mid-build and having to backtrack on queries I'd already written.
