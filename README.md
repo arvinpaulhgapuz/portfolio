@@ -1,12 +1,12 @@
 <!--
   BEFORE PUBLISHING, replace every bracketed placeholder:
-  ARVIN PAUL GAPUZ, [arvinpaum], [linkedin.com/in/you], [github.com/you],
+  [Your Name], [your.email@example.com], [linkedin.com/in/you], [github.com/you],
   [Honeypot tool], [Ticketing platform], [Year]
   Also swap the italic "e.g." notes inside each case for what you actually did,
   and adjust the 15-Day Timeline to match your real schedule.
 -->
 
-# 🛡️ [ARVIN PAUL GAPUZ] — SOC Analyst Portfolio
+# 🛡️ [Your Name] — SOC Analyst Portfolio
 
 **15-day self-directed training lab:** SIEM threat detection, network forensics, honeypot threat intelligence, and incident response.
 
@@ -26,7 +26,7 @@
 
 - [About](#about)
 - [Case Files](#case-files)
-  - [CASE-001 · SIEM Threat Detection & Dashboards](#case-001--siem-threat-detection--dashboard-build)
+  - [CASE-001 · SIEM Threat Detection & Dashboard Build](#case-001--siem-threat-detection--dashboard-build)
   - [CASE-002 · Incident Triage, Ticketing & Reporting](#case-002--incident-triage-ticketing--reporting)
   - [CASE-003 · Network Traffic & Packet Analysis](#case-003--network-traffic--packet-analysis)
   - [CASE-004 · Honeypot Deployment & Threat Intelligence](#case-004--honeypot-deployment--threat-intelligence)
@@ -39,7 +39,7 @@
 
 ## About
 
-I'm **ARVIN PAUL GAPUZ**, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. [Add 2–3 sentences: your background before this lab, what drew you to security, and the type of role you're targeting.]
+I'm **[Your Name]**, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. [Add 2–3 sentences: your background before this lab, what drew you to security, and the type of role you're targeting.]
 
 **Lab stack:** Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · [Honeypot tool] · [Ticketing platform]
 
@@ -173,4 +173,4 @@ soc-analyst-portfolio/
 - **GitHub:** [github.com/you]
 
 ---
-*Built as part of a 15-day self-directed SOC training lab. © [Year] ARVIN PAUL GAPUZ.*
+*Built as part of a 15-day self-directed SOC training lab. © [Year] [Your Name].*
