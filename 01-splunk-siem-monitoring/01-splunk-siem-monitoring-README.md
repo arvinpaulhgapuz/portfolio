@@ -60,4 +60,4 @@ Dashboard overview: top source IPs, HTTP status code distribution, traffic volum
 
 ## Reflection
 
-[1–3 sentences: what was the hardest part of this case, and what would you do differently with more time? This section shows judgment, not just task completion — it's often what recruiters remember.]
+[The hardest part was field discovery — figuring out which raw field actually mapped to "source IP" or "account name" across different sourcetypes, since BOTSv2 has inconsistent naming and some fields only appear after expanding specific event types. With more time, I'd build a quick field-mapping reference up front before touching any panels, instead of discovering inconsistencies mid-build and having to backtrack on queries I'd already written.]
