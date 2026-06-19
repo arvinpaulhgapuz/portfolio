@@ -48,7 +48,7 @@ index=botsv2 [search terms]
 
 ## Dashboard
 
-![Dashboard screenshot](./screenshots/BotsV2_Security_Overview_Dashboard.png)
+![Dashboard screenshot](./screenshots/BotsV2-Security-Overview-Dashboard.png)
 *[One-line caption: what this panel shows and how to read it.]*
 
 ## Skills Demonstrated
