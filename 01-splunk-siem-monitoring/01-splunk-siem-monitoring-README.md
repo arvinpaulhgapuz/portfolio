@@ -42,8 +42,8 @@ index=botsv2 [search terms]
 
 ## Findings
 
-- [Finding 1 — what you found and why it mattered, e.g., "Identified a spike in failed authentication attempts against a single account over a 10-minute window."]
-- [Finding 2]
+- [Finding 1 — "Identifies which source IP addresses are generating the highest volume of HTTP traffic — useful for spotting a single host or external IP responsible for an unusually large share of activity, a common indicator of scanning, beaconing, or compromised hosts."]
+- [Finding 2 - "Plots total event volume over time in hourly buckets, making sudden spikes or drops visible at a glance. A sharp, isolated spike — like the one in your screenshot around Aug 7 — often indicates a burst of automated activity (a scan, an attack, or a bulk data transfer) rather than normal user behavior, and is usually the first thing worth investigating further."]
 - [Finding 3]
 
 ## Dashboard
