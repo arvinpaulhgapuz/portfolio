@@ -79,7 +79,7 @@ Each case below mirrors a real SOC workflow stage — detection, response, netwo
 
 **Skills demonstrated:** alert triage · prioritization · ticketing workflows · incident report writing
 
-📁 Evidence: [`/02-incident-response`](./02-incident-response) — report template and example tickets
+📁 Evidence: [`/02-incident-response`](./02-incident-response/02-incident-response-README.md) — report template and example tickets
 
 ---
 
@@ -96,7 +96,7 @@ Each case below mirrors a real SOC workflow stage — detection, response, netwo
 
 **Skills demonstrated:** packet analysis · Wireshark filters · traffic baselining · anomaly identification
 
-📁 Evidence: [`/03-wireshark-traffic-analysis`](./03-wireshark-traffic-analysis) — capture notes and filter examples
+📁 Evidence: [`/03-wireshark-traffic-analysis`](./03-wireshark-traffic-analysis/03-wireshark-traffic-analysis-README.md) — capture notes and filter examples
 
 ---
 
@@ -113,7 +113,7 @@ Each case below mirrors a real SOC workflow stage — detection, response, netwo
 
 **Skills demonstrated:** honeypot configuration · network segmentation · log analysis · attacker TTP identification
 
-📁 Evidence: [`/04-kali-honeypot-homelab`](./04-kali-honeypot-homelab) — network diagram and log analysis notes
+📁 Evidence: [`/04-kali-honeypot-homelab`](./04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md) — network diagram and log analysis notes
 
 ---
 
