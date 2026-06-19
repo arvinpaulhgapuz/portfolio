@@ -49,7 +49,7 @@ index=botsv2 [search terms]
 ## Dashboard
 
 ![Dashboard screenshot](BotsV2-Security-Overview-Dashboard.png)
-*[One-line caption: what this panel shows and how to read it.]*
+Dashboard overview: top source IPs, HTTP status code distribution, traffic volume over time, and top Windows login accounts — used to spot anomalies (unusual spikes, dominant accounts, unexpected status codes) at a glance.
 
 ## Skills Demonstrated
 
