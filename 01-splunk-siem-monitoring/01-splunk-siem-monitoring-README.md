@@ -48,7 +48,7 @@ index=botsv2 [search terms]
 
 ## Dashboard
 
-![Dashboard screenshot](.\01-splunk-siem-monitoring\BotsV2-Security-Overview-Dashboard.png)
+![Dashboard screenshot](BotsV2-Security-Overview-Dashboard.png)
 *[One-line caption: what this panel shows and how to read it.]*
 
 ## Skills Demonstrated
