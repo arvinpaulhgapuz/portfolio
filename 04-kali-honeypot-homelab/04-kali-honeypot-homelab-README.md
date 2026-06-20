@@ -31,9 +31,9 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 4. **Analyze the logs** — reviewed honeypot logs for patterns: common usernames/passwords attempted, source IP behavior, scanning cadence, and any follow-on actions after a simulated "successful" login.
 5. **Cross-reference with packets** — correlated honeypot application-layer logs against the matching Wireshark capture (see [CASE-003](../03-wireshark-traffic-analysis)) to connect what was logged at the service level with what was visible on the wire.
 
-## Findings
+## Findings & Recommendations
 
-[`Findings & Recommendation`](./screenshots/cowrie_honeypot_findNrecom.md)
+*[`Findings & Recommendation`]*(./screenshots/cowrie_honeypot_findNrecom.md)
 
 ## Skills Demonstrated
 
