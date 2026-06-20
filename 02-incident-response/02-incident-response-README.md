@@ -47,4 +47,6 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 ## Reflection
 
-[1–3 sentences: what made triage harder than expected, or what you learned about writing reports for someone who wasn't there when the incident happened.]
+- The format shapes the honesty. Summary of Findings, then IOCs, then separately Recommended Actions, then separately Lessons Learned — forces the analyst to physically separate "what I saw" from "what I think we should do about it." A good report template is itself a control against overconfidence.
+- A reader who wasn't there can't audit that — there's no underlying evidence trail showing why it's critical, just the assertion that it is. By tying severity to a specific kill chain phase and named MITRE techniques, which gives a future reader something to actually check.
+- "Lessons Learned" section includes things like "SPF failures should generate higher-priority alerts" — that's not a finding about the incident, it's an admission of a detection gap. Image 1 has no equivalent field at all. Without it, the next analyst (or auditor) has no way to know the SOC already identified its own blind spot here; they'd have to rediscover it from scratch.
