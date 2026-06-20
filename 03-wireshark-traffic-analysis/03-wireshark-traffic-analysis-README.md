@@ -48,8 +48,8 @@ http.request and (http contains "password")
 
 ## Screenshots
 
-![Capture screenshot](./screenshots/capture-overview.png)
-*[One-line caption: what this capture shows and the filter used to find it.]*
+![Capture screenshot](./screenshots/WiresharkHandsOnLabReport.png)
+*This is a simulated incident called "Operation Midnight Crawl" — a training PCAP (operation_midnight_crawl.pcap) built around a fictional SOC alert: a host named DESKTOP-HR01 (192.168.10.45) triggered a high-priority alert for suspicious outbound connections.*
 
 ## Skills Demonstrated
 
