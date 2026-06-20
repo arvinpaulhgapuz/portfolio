@@ -60,4 +60,4 @@ http.request and (http contains "password")
 
 ## Reflection
 
-[1–3 sentences: what surprised you when you actually looked at the packets versus what you expected, or what filter took the longest to get right.]
+What actually surprised me was the Task 1 conversations table flattening two different things into one row — port 443 and port 4444 are the same destination IP, so Wireshark's IP-pair grouping makes a single coordinated beacon→payload sequence look like two unrelated entries. If I'd only read the worksheet, I'd have walked away thinking "beaconing" and "large transfer" were separate findings. Only once I tracked it by timestamp did it become obvious they're one continuous event 1 second apart.
