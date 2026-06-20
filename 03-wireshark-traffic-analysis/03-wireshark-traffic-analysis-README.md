@@ -42,9 +42,9 @@ http.request and (http contains "password")
 
 ## Findings
 
-- [Finding 1 — e.g., "Identified repeated SYN packets from a single source across a range of ports, consistent with a port scan."]
-- [Finding 2]
-- [Finding 3]
+- Identified 21 SYN packets from a single source (45.77.103.22) sweeping 21 distinct destination ports — common service ports plus database/remote-access ports (FTP, SSH, RDP, MSSQL, MySQL, VNC, Redis, MongoDB) — completed in under 350ms, each met with an immediate RST,ACK. Consistent with an automated TCP port scan against the victim host, not a legitimate connection attempt.
+- Identified 6 short-lived TCP sessions from the victim to 185.220.101.47:4444, spaced almost exactly 60 seconds apart (±0.16s), each following the same pattern: SYN → SYN/ACK → ACK → small PSH,ACK (120 bytes out, ~63-67 bytes back) → FIN. This regular interval and fixed payload size is consistent with C2 beaconing/check-in traffic, not normal application behavior.
+- Identified that the beacon channel (port 4444) and a large data transfer (port 443, ~64KB, same IP) are not independent events — the port-443 burst starts exactly 1 second after the 6th beacon completes. This timing is consistent with the beacon receiving a "go" instruction on its final check-in, followed immediately by payload download or data exfiltration over a TLS-looking port to blend in with normal traffic.
 
 ## Screenshots
 
