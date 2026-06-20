@@ -32,3 +32,5 @@ A review of the lab setup and supporting documentation surfaced a mix of genuine
 - Expand monitored services beyond SSH (e.g., via a multi-honeypot stack like T-Pot) to capture a wider range of attacker behavior.
 
 These changes would move the lab from a solid, isolated proof-of-concept toward a deployment that more closely reflects production honeypot practices — and would bring the documentation in line with what was actually built.
+
+(Back To [Main](\README.md))
