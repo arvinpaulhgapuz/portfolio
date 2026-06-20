@@ -21,7 +21,7 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 ## Network Diagram
 
 ![Network diagram](./screenshots/cowrie_honeypot_network_diagram.png)
-*The router runs in bridged mode (To switch each VM from NAT to Bridge), so the attacker VM and the Kali honeypot VM each get a real LAN-routable IP rather than sitting behind NAT. The attacker connects over standard SSH port 22, but iptables on the Kali VM silently redirects that traffic to port 2222, where Cowrie is actually listening with its fake shell — the attacker never touches a real system service. Everything they do gets written to cowrie.log in real time, and playlog lets you replay the full session afterward like a recording.*
+*This reflects the host machine's main LAN connection and the host-only virtual adapter are two completely separate paths, with no route between them — that's what actually kept the honeypot isolated from your personal devices. Both the attacker VM and the Kali honeypot VM live entirely inside that isolated segment, so all the SSH-to-Cowrie redirect activity happens in a sandbox that never touches the real network. I also added the Wireshark cross-reference step at the bottom to reflect the methodology doc.*
 
 ## Methodology
 
