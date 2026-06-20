@@ -51,4 +51,4 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 - A reader who wasn't there can't audit that — there's no underlying evidence trail showing why it's critical, just the assertion that it is. By tying severity to a specific kill chain phase and named MITRE techniques, which gives a future reader something to actually check.
 - "Lessons Learned" section includes things like "SPF failures should generate higher-priority alerts" — that's not a finding about the incident, it's an admission of a detection gap. Image 1 has no equivalent field at all. Without it, the next analyst (or auditor) has no way to know the SOC already identified its own blind spot here; they'd have to rediscover it from scratch.
 
-(Back To [Main](../README.md))
+(Back To [Main](/README.md))
