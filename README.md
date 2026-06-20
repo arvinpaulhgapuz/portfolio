@@ -8,7 +8,7 @@
 
 # 🛡️ ARVIN PAUL GAPUZ — SOC Analyst Portfolio
 
-**15-day self-directed training lab:** SIEM threat detection, network forensics, honeypot threat intelligence, and incident response.
+**15-Day Self-Directed Training Lab:** SIEM Threat Detection, Network Forensics, Honeypot Threat Intelligence, and Incident Response
 
 ![Status](https://img.shields.io/badge/status-open%20to%20work-2FBE9F?style=flat-square)
 ![Splunk](https://img.shields.io/badge/SIEM-Splunk-DD9A3D?style=flat-square)
