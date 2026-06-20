@@ -1,3 +1,5 @@
+!See [Certificate](./skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk.png)
+
 # Cisco SOC Essentials – Investigating with Splunk
 
 ## Overview
