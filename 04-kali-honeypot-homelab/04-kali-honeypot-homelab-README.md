@@ -33,9 +33,7 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 
 ## Findings
 
-- [Finding 1 — e.g., "Most login attempts used a small, repeated set of default credentials, consistent with automated credential-stuffing tools rather than targeted human attackers."]
-- [Finding 2 — e.g., observed scanning cadence/timing pattern]
-- [Finding 3 — e.g., notable source IP ranges or ASN patterns, if explored]
+*Findings from this lab highlighted the difference between functional and secure deployment — e.g., bridged networking provided connectivity but not isolation. Future iterations would incorporate VLAN segmentation and persistent firewall rules to better reflect production honeypot practices.*
 
 ## Skills Demonstrated
 
