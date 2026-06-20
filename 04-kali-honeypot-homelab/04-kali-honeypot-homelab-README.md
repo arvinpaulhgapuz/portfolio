@@ -33,7 +33,7 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 
 ## Findings & Recommendations
 
-[`Findings & Recommendation`](./screenshots/cowrie_honeypot_findNrecom.md)
+See Detailed [`Findings & Recommendation`](./screenshots/cowrie_honeypot_findNrecom.md)
 
 ## Skills Demonstrated
 
