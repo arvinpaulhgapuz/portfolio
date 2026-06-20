@@ -40,7 +40,7 @@
 ## About
 
 ![Capture screenshot](./screenshots/CBTTrainingCenter.png)
-Aspiring SOC Analyst with 16 years of IT experience as a Systems Analyst, Programmer, and IT Manager. After stepping away from hands-on IT, I'm channeling that foundation into cybersecurity — building detection and response skills through hands-on, self-driven projects. Bringing real-world IT experience and a security-first mindset to my next role.
+Aspiring SOC ANALYST with 16 years of IT experience as a Systems Analyst, Programmer, and IT Manager. After stepping away from hands-on IT, I'm channeling that foundation into CYBERSECURITY — building detection and response skills through hands-on, self-driven projects. Bringing real-world IT experience and a SECURITY-FIRST MINDSET to my next role.
 
 **Lab stack:** Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · [Honeypot tool] · [Ticketing platform]
 
