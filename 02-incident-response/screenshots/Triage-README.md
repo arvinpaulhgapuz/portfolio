@@ -164,3 +164,5 @@ winword.exe -> powershell.exe -EncodedCommand <Base64_String>
 The scenario indicates the Base64-encoded PowerShell command was used to download or execute a malicious payload, evade detection through command obfuscation, and establish persistence using Registry Run Keys.
 
 **Finding:** Encoded PowerShell execution is a common malware technique used to hide malicious commands from security tools and analysts.
+
+(Back To [Main](../README.md))
