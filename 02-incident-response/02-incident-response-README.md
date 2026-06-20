@@ -6,7 +6,7 @@
 
 ## Overview
 
-This case covers the part of SOC work that happens *after* detection: deciding what matters, tracking it through to resolution, and writing it up clearly enough that another analyst could pick up the case cold. Findings from the [CASE-001 Splunk dashboard work](../01-splunk-siem-monitoring/screenshots/SPLUNK_Enterprise_Dashboard.png) fed directly into this workflow.
+This case covers the part of SOC work that happens *after* detection: deciding what matters, tracking it through to resolution, and writing it up clearly enough that another analyst could pick up the case cold. Findings from the [CASE-001 Splunk dashboard work](../01-splunk-siem-monitoring/screenshots/SPLUNK_Enterprise_Dashboard_README.md) fed directly into this workflow.
 
 ## Workflow
 
