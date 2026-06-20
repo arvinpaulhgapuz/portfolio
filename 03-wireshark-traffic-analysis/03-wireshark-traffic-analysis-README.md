@@ -29,7 +29,7 @@ Most SOC tooling eventually points back to "go look at the packets." This case i
 
 ```
 # Isolate traffic to/from a specific host
-ip.addr == [x.x.x.x]
+ip.addr == 185.220.101.47
 
 # Spot potential port-scan behavior (SYN without ACK)
 tcp.flags.syn==1 && tcp.flags.ack==0
@@ -37,8 +37,8 @@ tcp.flags.syn==1 && tcp.flags.ack==0
 # Surface plaintext credentials in unencrypted protocols
 http.request and (http contains "password")
 
-# [Add your own filter here]
-```
+# Confirm payload transfer immediately follows the final beacon
+ip.addr == 185.220.101.47 && tcp.port == 443
 
 ## Findings
 
