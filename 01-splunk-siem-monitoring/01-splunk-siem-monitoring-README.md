@@ -34,7 +34,7 @@ index=botsv2 | stats count by sourcetype | sort -count
 ```
 
 ## Dashboard
-![SPLUNK screenshot](./screenshots/SPLUNK_Enterprise_Dashboard.png)
+
 ![Dashboard screenshot](./screenshots/BotsV2-Security-Overview-Dashboard.png)
 Dashboard overview: top source IPs, HTTP status code distribution, traffic volume over time, and top Windows login accounts — used to spot anomalies (unusual spikes, dominant accounts, unexpected status codes) at a glance.
 
