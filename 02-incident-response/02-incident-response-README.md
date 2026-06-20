@@ -37,7 +37,7 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 ## Incident Report
 
 ![Sample Incident](./screenshots/IncidentTriage.png)
-
+(See [Detailed Report](./screenshots/Triage-README.md))
 ## Skills Demonstrated
 
 - Alert triage and prioritization under a defined framework
