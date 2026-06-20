@@ -33,7 +33,7 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 
 ## Findings
 
-*Findings from this lab highlighted the difference between functional and secure deployment — e.g., bridged networking provided connectivity but not isolation. Future iterations would incorporate VLAN segmentation and persistent firewall rules to better reflect production honeypot practices.*
+![Network diagram](./screenshots/cowrie_honeypot_network_diagram.png)
 
 ## Skills Demonstrated
 
@@ -44,4 +44,4 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 
 ## Reflection
 
-[1–3 sentences: what did seeing live attack attempts teach you that reading about threats didn't, and what would you add to the lab next — e.g., a second honeypot type, longer collection window, or basic geolocation/ASN enrichment of source IPs.]
+Findings from this lab highlighted the difference between functional and secure deployment — e.g., bridged networking provided connectivity but not isolation. Future iterations would incorporate VLAN segmentation and persistent firewall rules to better reflect production honeypot practices.
