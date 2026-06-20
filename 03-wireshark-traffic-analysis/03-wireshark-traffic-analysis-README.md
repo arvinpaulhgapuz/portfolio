@@ -12,9 +12,9 @@ Most SOC tooling eventually points back to "go look at the packets." This case i
 
 | Component | Detail |
 |---|---|
-| Capture Tool | Wireshark [version] |
-| Capture Source | [e.g., home lab network interface, sample PCAP set, honeypot segment from CASE-004] |
-| Network Context | [brief description of what traffic was being captured and why] |
+| Capture Tool | Wireshark [Version 4.6.4 (v4.6.4-0-g93282876538d).] |
+| Capture Source | operation_midnight_crawl.PCAP set, honeypot segment from CASE-004 |
+| Network Context | The capture spans about 4 minutes and centers on a single internal host (192.168.10.45). It contains a mix of routine background traffic — DNS lookups for common services like Windows time sync, Google, and Microsoft 365 — alongside two unusual domain lookups that don't fit that pattern. The bulk of the capture, however, is a repeating beacon: the internal host connects out to an external IP on port 4444 every 60 seconds, sends a short status check-in, and gets told to wait — five times in a row, with the final exchange ending differently from the rest. There's also a brief burst of single-packet connection attempts from a separate external IP to several common service ports on the same internal host, suggesting a short scan rather than a sustained session. |
 
 ## Methodology
 
