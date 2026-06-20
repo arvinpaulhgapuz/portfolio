@@ -1,4 +1,4 @@
-(/skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk.png)
+![Capture screenshot](./skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk.png)
 
 # Cisco SOC Essentials – Investigating with Splunk
 
