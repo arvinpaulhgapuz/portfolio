@@ -46,4 +46,4 @@ A honeypot gives a firsthand, unfiltered look at what automated attackers actual
 
 Findings from this lab highlighted the difference between functional and secure deployment — e.g., bridged networking provided connectivity but not isolation. Future iterations would incorporate VLAN segmentation and persistent firewall rules to better reflect production honeypot practices.
 
-(Back To [Main](../README.md))
+(Back To [Main](/README.md))
