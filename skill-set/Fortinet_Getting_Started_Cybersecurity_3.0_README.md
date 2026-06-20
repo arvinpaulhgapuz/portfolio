@@ -1,114 +1,101 @@
-# Fortinet Getting Started in Cybersecurity 3.0
+# Fortinet – Getting Started in Cybersecurity 3.0
 
-## 📖 Overview
+## Overview
 
-This repository contains notes, learning activities, and key takeaways from the Fortinet Getting Started in Cybersecurity 3.0 course. The course introduces fundamental cybersecurity concepts, cyber threats, security best practices, and career opportunities within the cybersecurity field.
+This course is part of the **Fortinet Certified Fundamentals (FCF) in Cybersecurity** training track and serves as an entry-level introduction to the field of cybersecurity. It is designed for individuals exploring cybersecurity as a career path, providing a broad overview of the industry, the skills and roles involved, and the foundational knowledge needed to begin specializing further. The course focuses on orientation and awareness, helping learners understand where they fit within the cybersecurity profession before diving into technical training.
 
 ---
 
-## 🎯 Learning Objectives
+## Who This Course Is For
+
+- Individuals exploring a career change into cybersecurity
+- Students and recent graduates considering cybersecurity as a profession
+- IT professionals looking to understand how cybersecurity fits within the broader tech industry
+- Anyone pursuing the Fortinet Certified Fundamentals (FCF) certification path
+
+## Prerequisites
+
+- No prior cybersecurity experience required
+- Basic computer and internet literacy is helpful
+
+---
+
+## Learning Objectives
 
 By completing this course, learners will be able to:
 
-- Understand the importance of cybersecurity in today's digital world.
-- Identify common cyber threats and attack methods.
-- Recognize cybersecurity best practices for individuals and organizations.
-- Understand basic security technologies and controls.
-- Explore cybersecurity career paths and industry certifications.
-- Develop foundational knowledge for further cybersecurity studies.
+1. Describe what cybersecurity is and why it is important
+2. Identify common cybersecurity career paths and job roles
+3. Understand the skills, certifications, and education relevant to cybersecurity careers
+4. Explain the structure and purpose of a typical cybersecurity team
+5. Recognize key industry frameworks and standards
+6. Identify entry points and next steps for building a cybersecurity career
+7. Understand Fortinet's role in the cybersecurity industry and training ecosystem
 
 ---
 
-## 🛠 Topics Covered
+## Course Outline
 
-### Cybersecurity Fundamentals
-- What is cybersecurity?
-- The importance of protecting digital assets
-- Cybersecurity principles
-- The CIA Triad (Confidentiality, Integrity, Availability)
+### Module 1: Welcome to Cybersecurity
+- What is cybersecurity, and why is it a growing field?
+- The impact of cyber threats on businesses and society
+- Why organizations need skilled cybersecurity professionals
+- Overview of the course and learning path
 
-### Cyber Threats
-- Malware
-- Ransomware
-- Phishing
-- Social Engineering
-- Insider Threats
-- Denial-of-Service (DoS) Attacks
+### Module 2: The Cybersecurity Industry
+- Key sectors that rely on cybersecurity (finance, healthcare, government, etc.)
+- The global cybersecurity skills gap
+- Industry growth trends and job demand
+- Overview of cybersecurity vendors and the security ecosystem
 
-### Security Best Practices
-- Strong passwords
-- Multi-Factor Authentication (MFA)
-- Software updates and patching
-- Safe internet browsing
-- Data protection practices
+### Module 3: Cybersecurity Career Paths
+- Common entry-level roles (SOC analyst, help desk/security support, junior pentester)
+- Mid-level and advanced roles (security engineer, architect, CISO)
+- Specializations: network security, cloud security, GRC, incident response, ethical hacking
+- Choosing a career path that fits your interests and strengths
 
-### Security Technologies
-- Firewalls
-- Antivirus solutions
-- Intrusion Detection Systems (IDS)
-- Intrusion Prevention Systems (IPS)
-- Virtual Private Networks (VPNs)
+### Module 4: Skills and Qualifications
+- Technical skills foundational to cybersecurity (networking, OS fundamentals, scripting basics)
+- Soft skills that matter (communication, problem-solving, attention to detail)
+- Overview of relevant certifications (Fortinet NSE, CompTIA, (ISC)², etc.)
+- Formal education vs. self-paced/online learning paths
 
-### Cybersecurity Careers
-- Security Analyst
-- SOC Analyst
-- Network Security Engineer
-- Incident Responder
-- Threat Hunter
-- Security Consultant
+### Module 5: How Cybersecurity Teams Operate
+- Structure of a typical security team or SOC
+- Roles and responsibilities within a security organization
+- Collaboration between IT, security, and business units
+- Introduction to security operations and incident response basics
 
----
-
-## 🔍 Key Concepts Learned
-
-### CIA Triad
-The foundation of information security:
-- Confidentiality
-- Integrity
-- Availability
-
-### Risk Management
-Understanding, assessing, and mitigating cybersecurity risks.
-
-### Defense in Depth
-Using multiple layers of security controls to protect systems and data.
-
-### Security Awareness
-Reducing human-related risks through education and cybersecurity training.
+### Module 6: Building Your Cybersecurity Career
+- Creating a learning and certification roadmap
+- Gaining hands-on experience (labs, CTFs, home labs, internships)
+- Networking within the cybersecurity community
+- Next steps: continuing with Fortinet NSE training and certifications
 
 ---
 
-## 📚 Skills Developed
+## Tools and Materials
 
-- Cybersecurity Awareness
-- Threat Identification
-- Security Best Practices
-- Risk Management Fundamentals
-- Security Technology Basics
-- Cybersecurity Career Readiness
+- Fortinet NSE Training Institute course content (self-paced, online)
+- Course videos, readings, and knowledge check quizzes
+- No software installation or lab environment required
 
 ---
 
-## 🚀 Learning Outcomes
+## Assessment
 
-After completing this course, learners should be able to:
-
-- Explain core cybersecurity concepts.
-- Recognize common cyber threats and vulnerabilities.
-- Apply cybersecurity best practices in daily activities.
-- Understand how security technologies protect digital environments.
-- Explore entry-level cybersecurity career opportunities.
+- Knowledge checks at the end of each module
+- Final course assessment/quiz
+- Successful completion contributes toward the Fortinet Certified Fundamentals (FCF) certification path
 
 ---
 
-## 🏆 Certification
+## Estimated Duration
 
-This repository supports learning for the Fortinet Getting Started in Cybersecurity 3.0 course and serves as a foundation for more advanced cybersecurity training and certifications.
+Approximately **1–2 hours**, self-paced.
 
 ---
 
-## 👨‍💻 Author
+## Notes
 
-Fortinet Getting Started in Cybersecurity 3.0
-
-A foundational cybersecurity learning project focused on understanding cyber threats, security principles, and best practices for protecting digital assets.
+This README provides a general course and outline summary based on the standard structure of Fortinet's *Getting Started in Cybersecurity 3.0* course within the NSE Training Institute. Module titles and content may vary slightly depending on updates Fortinet makes to the course curriculum.
