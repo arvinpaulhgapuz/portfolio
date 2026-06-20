@@ -40,8 +40,7 @@
 ## About
 
 ![Capture screenshot](./screenshots/CBTTrainingCenter.png)
-I'm **ARVIN PAUL GAPUZ**, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. [Add 2–3 sentences: your background before this lab, what drew you to security, and the type of role you're targeting.]
-
+Aspiring SOC Analyst with 16 years of IT experience as a Systems Analyst, Programmer, and IT Manager. After stepping away from hands-on IT, I'm channeling that foundation into cybersecurity — building detection and response skills through hands-on, self-driven projects. Bringing real-world IT experience and a security-first mindset to my next role.
 **Lab stack:** Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · [Honeypot tool] · [Ticketing platform]
 
 ---
