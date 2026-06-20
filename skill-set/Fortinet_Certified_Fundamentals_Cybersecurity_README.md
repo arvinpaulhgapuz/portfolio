@@ -1,3 +1,5 @@
+![See Certificate Screenshot](/skill-set/Fortinet_Certified_Fundamentals_Cybersecurity.png)
+
 # Fortinet Certified Fundamentals (FCF) in Cybersecurity
 
 ## Overview
