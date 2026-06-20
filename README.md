@@ -131,6 +131,8 @@ Each case below mirrors a real SOC workflow stage — detection, response, netwo
 | 13–14 | Incident Response | Ticketing workflow, triage practice, incident report writing |
 | 15 | Wrap-Up | Portfolio documentation, demo rehearsal, lessons learned |
 
+(Back To [Top](README.md))
+
 ## Skill Set
 
 | Category | Skills |
@@ -139,6 +141,8 @@ Each case below mirrors a real SOC workflow stage — detection, response, netwo
 | Network Forensics | Wireshark, protocol analysis, PCAP review, TCP stream reconstruction |
 | Lab & Linux Ops | Kali Linux, honeypot deployment, network segmentation, Linux CLI |
 | IR & Communication | Triage, ticketing, incident reports, stakeholder demos |
+
+(Back To [Top](README.md))
 
 ## Repo Structure
 
@@ -165,6 +169,8 @@ soc-analyst-portfolio/
     └── screenshots/
 ```
 
+(Back To [Top](README.md))
+
 > Tip for recruiters skimming GitHub: keep real screenshots (dashboard panels, Wireshark captures, honeypot logs) inside each folder — visual proof of hands-on work matters more than extra prose.
 
 ## Contact
@@ -176,4 +182,4 @@ soc-analyst-portfolio/
 ---
 *Built as part of a 15-day self-directed SOC training lab. © 2026 ARVIN PAUL GAPUZ.*
 
-(Back To [Main](README.md))
+(Back To [Top](README.md))
