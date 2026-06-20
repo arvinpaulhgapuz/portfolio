@@ -44,6 +44,7 @@ Aspiring SOC ANALYST with 16 years of IT experience as a Systems Analyst, Progra
 
 **Lab stack:** Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · [Honeypot tool] · [Ticketing platform]
 
+(Back To [Top](\README.md))
 ---
 
 ## Case Files
@@ -169,7 +170,7 @@ soc-analyst-portfolio/
     └── screenshots/
 ```
 
-(Back To [Top](README.md))
+(Back To [Top](\README.md))
 
 > Tip for recruiters skimming GitHub: keep real screenshots (dashboard panels, Wireshark captures, honeypot logs) inside each folder — visual proof of hands-on work matters more than extra prose.
 
