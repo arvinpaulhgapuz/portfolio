@@ -23,33 +23,9 @@ Most SOC tooling eventually points back to "go look at the packets." This case i
 3. **Follow the stream** — reconstructed full TCP/HTTP sessions using *Follow → TCP Stream* to see what actually happened end-to-end, not just that a connection occurred.
 4. **Baseline vs. anomaly** — compared a capture of "normal" traffic against a capture with suspicious activity to build a feel for what should draw attention.
 
-## Key Filters Used
-
-> Replace with the filters you actually relied on and a one-line note on what each one isolates.
-
-```
-# Isolate traffic to/from a specific host
-ip.addr == [x.x.x.x]
-
-# Spot potential port-scan behavior (SYN without ACK)
-tcp.flags.syn==1 && tcp.flags.ack==0
-
-# Surface plaintext credentials in unencrypted protocols
-http.request and (http contains "password")
-
-# [Add your own filter here]
-```
-
-## Findings
-
-- [Finding 1 — e.g., "Identified repeated SYN packets from a single source across a range of ports, consistent with a port scan."]
-- [Finding 2]
-- [Finding 3]
-
 ## Screenshots
 
-![Capture screenshot](./screenshots/WiresharkHandsOnLabReport.png)
-![Capture screenshot](./screenshots/WiresharkHandsOnLabReport2.png)
+![Capture screenshot](./screenshots/WiresharkHandsOnLabReport.png),(./screenshots/WiresharkHandsOnLabReport2.png)
 *This is a simulated incident called "Operation Midnight Crawl" — a training PCAP (operation_midnight_crawl.pcap) built around a fictional SOC alert: a host named DESKTOP-HR01 (192.168.10.45) triggered a high-priority alert for suspicious outbound connections.The lab teaches the standard SOC Tier 1 triage flow — orient first with stats, then isolate the host, then dig into DNS — to confirm a beaconing malware infection.*
 
 ## Skills Demonstrated
