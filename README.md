@@ -39,7 +39,7 @@
 
 ## About
 
-!(./screenshots/CBTTrainingCenter.png)
+!(/screenshots/CBTTrainingCenter.png)
 
 I'm **ARVIN PAUL GAPUZ**, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. [Add 2–3 sentences: your background before this lab, what drew you to security, and the type of role you're targeting.]
 
