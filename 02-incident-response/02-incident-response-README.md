@@ -22,7 +22,7 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 ## Triage / Priority Criteria
 
-| Priority | Criteria | Example |
+| Priority | Criteria | 
 |---|---|---|
 | **P1 – Critical** | Active compromise, confirmed data exposure |
 | **P2 – High** | Strong indicator of compromise, no confirmed impact yet |
