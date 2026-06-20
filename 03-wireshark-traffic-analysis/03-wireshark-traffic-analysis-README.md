@@ -49,8 +49,8 @@ http.request and (http contains "password")
 ## Screenshots
 
 ![Capture screenshot](./screenshots/WiresharkHandsOnLabReport.png)
-
-*What actually surprised me was the Task 1 conversations table flattening two different things into one row — port 443 and port 4444 are the same destination IP, so Wireshark's IP-pair grouping makes a single coordinated beacon→payload sequence look like two unrelated entries. If I'd only read the worksheet, I'd have walked away thinking "beaconing" and "large transfer" were separate findings. Only once I tracked it by timestamp did it become obvious they're one continuous event 1 second apart.*
+![Capture screenshot](./screenshots/WiresharkHandsOnLabReport2.png)
+*This is a simulated incident called "Operation Midnight Crawl" — a training PCAP (operation_midnight_crawl.pcap) built around a fictional SOC alert: a host named DESKTOP-HR01 (192.168.10.45) triggered a high-priority alert for suspicious outbound connections.The lab teaches the standard SOC Tier 1 triage flow — orient first with stats, then isolate the host, then dig into DNS — to confirm a beaconing malware infection.*
 
 ## Skills Demonstrated
 
@@ -61,4 +61,4 @@ http.request and (http contains "password")
 
 ## Reflection
 
-[1–3 sentences: what surprised you when you actually looked at the packets versus what you expected, or what filter took the longest to get right.]
+What actually surprised me was the Task 1 conversations table flattening two different things into one row — port 443 and port 4444 are the same destination IP, so Wireshark's IP-pair grouping makes a single coordinated beacon→payload sequence look like two unrelated entries. If I'd only read the worksheet, I'd have walked away thinking "beaconing" and "large transfer" were separate findings. Only once I tracked it by timestamp did it become obvious they're one continuous event 1 second apart.
