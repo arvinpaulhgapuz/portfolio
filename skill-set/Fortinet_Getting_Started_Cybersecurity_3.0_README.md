@@ -1,4 +1,4 @@
-![See Certificate Screenshot](/skill-set/Fortinet_Getting_Started_Cybersecurity.png)
+![See Certificate Screenshot](/skill-set/Fortinet_Getting_Started_Cybersecurity_3.0.png)
 
 # Fortinet – Getting Started in Cybersecurity 3.0
 
