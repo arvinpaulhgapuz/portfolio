@@ -177,10 +177,10 @@ soc-analyst-portfolio/
 
 ## Certificates and Achievements
 
-[`CISCO SOC Essentials Investigating With SPLUNK`](./skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk.png) 
-[`Fortinet Certified Fundamentals Cybersecurity`](./skill-set/Fortinet_Certified_Fundamentals_Cybersecurity.png) 
-[`Fortinet Certified Introduction Threat Landscape 3.0`](./skill-set/Fortinet_Certified_Introduction_Threat_Landscape_3.0.png) 
-[`Fortinet Getting Started Cybersecurity 3.0`](./skill-set/Fortinet_Getting_Started_Cybersecurity_3.0.png) 
+- [`CISCO SOC Essentials Investigating With SPLUNK`](./skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk_README.md)
+- [`Fortinet Certified Fundamentals Cybersecurity`](./skill-set/Fortinet_Certified_Fundamentals_Cybersecurity_README.md)
+- [`Fortinet Certified Introduction Threat Landscape 3.0`](./skill-set/Fortinet_Certified_Introduction_Threat_Landscape_3.0_README.md)
+- [`Fortinet Getting Started Cybersecurity 3.0`](./skill-set/Fortinet_Getting_Started_Cybersecurity_3.0_README.md) 
 
 ## Contact
 
