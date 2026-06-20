@@ -31,11 +31,11 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 ## Sample Tickets
 
-See [`sample-tickets.md`](./sample-tickets.md) for [X] example tickets logged during this lab, showing the fields used and how priority was assigned.
+See [`sample-tickets.md`](./screenshots/IncidentTicketWriting.png) for [X] example tickets logged during this lab, showing the fields used and how priority was assigned.
 
 ## Incident Report
 
-See [`incident-report-template.md`](./incident-report-template.md) for the reusable template, and [add filenames] for completed example reports written during this lab.
+See [`incident-report-template.md`](./screenshots/IncidentTriage.png) for the reusable template, and [add filenames] for completed example reports written during this lab.
 
 ## Skills Demonstrated
 
