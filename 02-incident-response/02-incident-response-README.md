@@ -32,7 +32,7 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 ## Sample Tickets
 
-![Sample Ticket](./screenshots/IncidentTicketWriting.png)
+![Sample Ticket](./screenshots/Triage_Ticketing.png)
 
 ## Incident Report
 
