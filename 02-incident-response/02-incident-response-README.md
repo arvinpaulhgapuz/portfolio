@@ -24,10 +24,10 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 | Priority | Criteria | Example |
 |---|---|---|
-| **P1 – Critical** | Active compromise, confirmed data exposure | [example] |
-| **P2 – High** | Strong indicator of compromise, no confirmed impact yet | [example] |
-| **P3 – Medium** | Suspicious but plausible benign explanation | [example] |
-| **P4 – Low** | Informational / noise, logged for trend tracking | [example] |
+| **P1 – Critical** | Active compromise, confirmed data exposure |
+| **P2 – High** | Strong indicator of compromise, no confirmed impact yet |
+| **P3 – Medium** | Suspicious but plausible benign explanation | 
+| **P4 – Low** | Informational / noise, logged for trend tracking |
 
 ## Sample Tickets
 
