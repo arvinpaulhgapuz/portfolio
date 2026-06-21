@@ -1,3 +1,7 @@
+![See Certificate Screenshot](/skill-set/Fortinet_Certified_Introduction_Threat_Landscape_3.0.png)
+
+(Back To [Main](../README.md))
+
 # Introduction to the Threat Landscape (3.0)
 
 **Source:** Fortinet Training Institute — https://training.fortinet.com
