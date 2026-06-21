@@ -103,3 +103,5 @@ Approximately **1–2 hours**, self-paced.
 ## Notes
 
 This README provides a general course and outline summary based on the standard structure of Fortinet's *Getting Started in Cybersecurity 3.0* course within the NSE Training Institute. Module titles and content may vary slightly depending on updates Fortinet makes to the course curriculum.
+
+(Back To [Main](../README.md))
