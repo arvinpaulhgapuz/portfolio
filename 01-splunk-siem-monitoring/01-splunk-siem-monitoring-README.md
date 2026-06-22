@@ -49,4 +49,4 @@ Dashboard overview: top source IPs, HTTP status code distribution, traffic volum
 
 The dashboard effectively surfaces high-level volume metrics (total events, top IPs, status code distribution, login frequency) but does not perform any anomaly highlighting or risk-based prioritization. All data points — whether benign (a routine service account) or potentially significant (an external IP generating high traffic, anonymous logon attempts, elevated 4xx/5xx error rates) — are presented with equal visual weight. Adding threshold-based flagging, color-coded severity, or baseline deviation indicators would reduce analyst triage time and lower the chance that a meaningful signal is missed in a high-volume environment (68.8M+ events).
 
-(Back To [Main](/README.md))
+(Back To [`Main`](/README.md))
