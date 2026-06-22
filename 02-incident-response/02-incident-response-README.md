@@ -14,7 +14,7 @@ This case covers the part of SOC work that happens *after* detection: deciding w
 Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Report  →  Close
 ```
 
-1. **Log it** — every alert or finding worth tracking was entered into [ticketing platform](#sample-ticket). as a ticket, rather than left as a one-off search result.
+1. **Log it** — every alert or finding worth tracking was entered into [ticketing platform](#sample-tickets). as a ticket, rather than left as a one-off search result.
 2. **Triage it** — each ticket was scored for priority before deep investigation, using the criteria below.
 3. **Investigate** — pulled supporting evidence (Splunk searches, packet captures, honeypot logs) to confirm or rule out the ticket.
 4. **Report it** — higher-priority tickets were written up using the [incident report template](#incident-report).
