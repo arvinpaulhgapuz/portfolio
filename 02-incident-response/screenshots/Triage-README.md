@@ -165,4 +165,4 @@ The scenario indicates the Base64-encoded PowerShell command was used to downloa
 
 **Finding:** Encoded PowerShell execution is a common malware technique used to hide malicious commands from security tools and analysts.
 
-(Back To [Main])(../02-incident-response-README.md)
+(Back To [Main](./02-incident-response-README.md)
