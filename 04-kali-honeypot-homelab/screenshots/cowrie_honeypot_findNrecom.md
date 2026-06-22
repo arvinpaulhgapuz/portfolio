@@ -33,4 +33,4 @@ A review of the lab setup and supporting documentation surfaced a mix of genuine
 
 These changes would move the lab from a solid, isolated proof-of-concept toward a deployment that more closely reflects production honeypot practices — and would bring the documentation in line with what was actually built.
 
-(Back To [Main](/README.md))
+(Back To [`/04-kali-honeypot-homelab`](./04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md))
