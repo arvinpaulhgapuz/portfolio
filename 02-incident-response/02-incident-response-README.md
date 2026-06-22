@@ -39,7 +39,7 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 
 ![Sample Incident](./screenshots/IncidentTriage.png)
 (Back To [`Top`](/02-incident-response/02-incident-response-README.md)) OR
-(See [Detailed Report](./screenshots/Triage-README.md))
+(See [`Detailed Report`](./screenshots/Triage-README.md))
 
 ## Skills Demonstrated
 
