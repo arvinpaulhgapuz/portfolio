@@ -6,7 +6,7 @@
 
 ## Overview
 
-This case covers the part of SOC work that happens *after* detection: deciding what matters, tracking it through to resolution, and writing it up clearly enough that another analyst could pick up the case cold. Findings from the [CASE-001 Splunk dashboard work](../01-splunk-siem-monitoring/screenshots/SPLUNK_Enterprise_Dashboard_README.md) fed directly into this workflow.
+This case covers the part of SOC work that happens *after* detection: deciding what matters, tracking it through to resolution, and writing it up clearly enough that another analyst could pick up the case cold. Findings from the ['CASE-001 Splunk Dashboard Work'](../01-splunk-siem-monitoring/screenshots/SPLUNK_Enterprise_Dashboard_README.md) fed directly into this workflow.
 
 ## Workflow
 
@@ -14,10 +14,10 @@ This case covers the part of SOC work that happens *after* detection: deciding w
 Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Report  →  Close
 ```
 
-1. **Log it** — every alert or finding worth tracking was entered into [ticketing platform](#sample-tickets). as a ticket, rather than left as a one-off search result.
+1. **Log it** — every alert or finding worth tracking was entered into [`Ticketing Platform`](#sample-tickets). as a ticket, rather than left as a one-off search result.
 2. **Triage it** — each ticket was scored for priority before deep investigation, using the criteria below.
 3. **Investigate** — pulled supporting evidence (Splunk searches, packet captures, honeypot logs) to confirm or rule out the ticket.
-4. **Report it** — higher-priority tickets were written up using the [incident report template](#incident-report).
+4. **Report it** — higher-priority tickets were written up using the [`Incident Report Template`](#incident-report).
 5. **Close it** — ticket updated with final status and a link to the report.
 
 ## Triage / Priority Criteria
@@ -54,4 +54,4 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 - A reader who wasn't there can't audit that — there's no underlying evidence trail showing why it's critical, just the assertion that it is. By tying severity to a specific kill chain phase and named MITRE techniques, which gives a future reader something to actually check.
 - "Lessons Learned" section includes things like "SPF failures should generate higher-priority alerts" — that's not a finding about the incident, it's an admission of a detection gap. Image 1 has no equivalent field at all. Without it, the next analyst (or auditor) has no way to know the SOC already identified its own blind spot here; they'd have to rediscover it from scratch.
 
-(Back To [Main](/README.md))
+(Back To [`Main`](/README.md))
