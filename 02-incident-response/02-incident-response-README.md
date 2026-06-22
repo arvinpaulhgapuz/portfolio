@@ -17,7 +17,7 @@ Alert / Finding  →  Ticket Logged  →  Triage  →  Investigation  →  Repor
 1. **Log it** — every alert or finding worth tracking was entered into [ticketing platform] as a ticket, rather than left as a one-off search result.
 2. **Triage it** — each ticket was scored for priority before deep investigation, using the criteria below.
 3. **Investigate** — pulled supporting evidence (Splunk searches, packet captures, honeypot logs) to confirm or rule out the ticket.
-4. **Report it** — higher-priority tickets were written up using the [incident report template](#Incident Report).
+4. **Report it** — higher-priority tickets were written up using the [incident report template](#incident report).
 5. **Close it** — ticket updated with final status and a link to the report.
 
 ## Triage / Priority Criteria
