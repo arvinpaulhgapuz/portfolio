@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arvin Paul Gapuz — SOC Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0a0d12;
-      --surface:   #0f1420;
-      --surface2:  #151c2c;
-      --border:    #1e2d45;
-      --accent:    #00d4ff;
-      --accent2:   #2FBE9F;
-      --amber:     #DD9A3D;
-      --danger:    #ff4c6a;
-      --text:      #c8d8e8;
-      --muted:     #5a7a99;
-      --white:     #e8f4ff;
-      --mono:      'JetBrains Mono', 'Share Tech Mono', monospace;
-      --sans:      'Inter', system-ui, sans-serif;
+      --bg:        #0A0E14;
+      --surface:   #111722;
+      --border:    #1E2A3A;
+      --accent:    #00FFB2;
+      --accent2:   #0E7EFF;
+      --danger:    #FF4C4C;
+      --text:      #C8D8E8;
+      --muted:     #5A7080;
+      --heading:   #EDF3FA;
+      --mono:      'Share Tech Mono', monospace;
+      --sans:      'Inter', sans-serif;
+      --display:   'Syne', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -32,896 +32,805 @@
       font-family: var(--sans);
       font-size: 15px;
       line-height: 1.7;
-      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* ── Scanline overlay ── */
+    /* ── SCANLINE OVERLAY ── */
     body::before {
       content: '';
+      pointer-events: none;
       position: fixed;
       inset: 0;
       background: repeating-linear-gradient(
         0deg,
         transparent,
-        transparent 2px,
-        rgba(0,212,255,0.015) 2px,
-        rgba(0,212,255,0.015) 4px
+        transparent 3px,
+        rgba(0,255,178,0.015) 3px,
+        rgba(0,255,178,0.015) 4px
       );
-      pointer-events: none;
       z-index: 9999;
     }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
     /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(10,13,18,0.92);
+      background: rgba(10,14,20,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
+      padding: 14px 0;
+    }
+    nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
+      gap: 16px;
     }
-
-    .nav-brand {
+    .nav-logo {
       font-family: var(--mono);
-      font-size: 0.78rem;
+      font-size: 13px;
       color: var(--accent);
-      letter-spacing: 0.08em;
-    }
-
-    .nav-brand span { color: var(--muted); }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.6rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 500;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
       transition: color 0.2s;
     }
-
-    nav a:hover { color: var(--accent); }
+    .nav-links a:hover { color: var(--accent); }
 
     /* ── HERO ── */
     .hero {
+      padding: 100px 0 80px;
       position: relative;
       overflow: hidden;
-      padding: 7rem 2rem 5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
     }
-
     .hero::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,212,255,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 80% 60%, rgba(47,190,159,0.05) 0%, transparent 60%);
+      top: -120px; right: -180px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,178,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
-
-    .hero-badge {
-      display: inline-block;
+    .hero-eyebrow {
       font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      border: 1px solid var(--accent2);
-      padding: 0.3rem 0.9rem;
-      border-radius: 2px;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero h1 {
-      font-family: var(--mono);
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      color: var(--white);
-      letter-spacing: 0.04em;
-      line-height: 1.15;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero h1 .shield { color: var(--accent); }
-
-    .hero-sub {
-      font-family: var(--mono);
-      font-size: 0.85rem;
+      font-size: 12px;
       color: var(--accent);
-      letter-spacing: 0.1em;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-      max-width: 640px;
-      margin: 0 auto 2rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* badges */
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .badge {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      padding: 0.25rem 0.65rem;
-      border-radius: 2px;
-      font-weight: 600;
-    }
-
-    .badge-green  { background: rgba(47,190,159,0.12); color: #2FBE9F; border: 1px solid rgba(47,190,159,0.3); }
-    .badge-amber  { background: rgba(221,154,61,0.12);  color: #DD9A3D; border: 1px solid rgba(221,154,61,0.3); }
-    .badge-blue   { background: rgba(0,212,255,0.1);    color: #00d4ff; border: 1px solid rgba(0,212,255,0.25); }
-    .badge-gray   { background: rgba(140,150,165,0.1);  color: #8C96A5; border: 1px solid rgba(140,150,165,0.25); }
-
-    .hero-live {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-    }
-
-    .hero-live a { color: var(--accent); text-decoration: none; }
-    .hero-live a:hover { text-decoration: underline; }
-
-    /* ── SECTION WRAPPER ── */
-    .section {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 20px;
     }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 2.5rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid var(--border);
+    .hero-eyebrow::before { content: '> '; }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      color: var(--heading);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
     }
-
-    /* ── ABOUT ── */
-    .about-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent2);
-      border-radius: 4px;
-      padding: 1.8rem 2rem;
-      font-size: 0.95rem;
+    .hero h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text);
+      max-width: 620px;
+      margin-bottom: 36px;
       line-height: 1.8;
     }
 
-    .stack-label {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-top: 1.2rem;
-      letter-spacing: 0.05em;
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
     }
-
-    .stack-label strong { color: var(--accent2); }
-
-    /* ── CASES ── */
-    .cases-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .case-card {
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 4px;
-      padding: 1.8rem 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.25s, transform 0.2s;
-    }
-
-    .case-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-
-    .case-card:hover { border-color: rgba(0,212,255,0.35); transform: translateY(-2px); }
-    .case-card:hover::before { opacity: 1; }
-
-    .case-id {
+      padding: 5px 12px;
       font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--accent);
-      letter-spacing: 0.2em;
-      margin-bottom: 0.4rem;
-    }
-
-    .case-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.7rem;
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .case-tag {
-      font-family: var(--mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.06em;
+      font-size: 11px;
       color: var(--muted);
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      padding: 0.2rem 0.5rem;
-      border-radius: 2px;
+      letter-spacing: 0.06em;
     }
-
-    .status-dot {
-      display: inline-block;
+    .badge.green { border-color: rgba(0,255,178,0.3); color: var(--accent); }
+    .badge .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--accent2);
-      box-shadow: 0 0 6px var(--accent2);
-      margin-right: 0.4rem;
-      vertical-align: middle;
-      animation: pulse 2s infinite;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.3; }
     }
 
-    .case-status {
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0A0E14;
       font-family: var(--mono);
-      font-size: 0.62rem;
-      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 700;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .case-objective {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      font-style: italic;
-      border-left: 2px solid var(--border);
-      padding-left: 0.9rem;
-    }
-
-    .case-card h4 {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.04em;
-    }
-
-    .case-card ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-
-    .case-card ul li {
-      font-size: 0.85rem;
-      color: var(--muted);
-      padding: 0.25rem 0;
-      padding-left: 1.1rem;
-      position: relative;
-    }
-
-    .case-card ul li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    .skills-line {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 0.9rem;
-      margin-top: 0.9rem;
-    }
-
-    .skills-line span { color: var(--amber); }
-
-    .evidence-link {
-      display: inline-block;
-      margin-top: 0.7rem;
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--accent);
+      padding: 12px 28px;
+      border-radius: 4px;
       text-decoration: none;
-      letter-spacing: 0.06em;
-      border: 1px solid rgba(0,212,255,0.25);
-      padding: 0.25rem 0.65rem;
-      border-radius: 2px;
-      transition: background 0.2s, color 0.2s;
+      transition: opacity 0.2s, transform 0.2s;
     }
+    .hero-cta:hover { opacity: 0.88; transform: translateY(-2px); }
 
-    .evidence-link:hover { background: rgba(0,212,255,0.1); }
-
-    /* ── TIMELINE ── */
-    .timeline { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-
-    .tl-row {
-      display: grid;
-      grid-template-columns: 90px 1fr 2fr;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .tl-row:last-child { border-bottom: none; }
-
-    .tl-row.header {
-      background: var(--surface2);
+    /* ── SECTION TITLES ── */
+    section { padding: 80px 0; border-top: 1px solid var(--border); }
+    .section-label {
       font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .tl-cell {
-      padding: 0.75rem 1rem;
-      font-size: 0.85rem;
-      border-right: 1px solid var(--border);
-    }
-
-    .tl-cell:last-child { border-right: none; }
-
-    .tl-days {
-      font-family: var(--mono);
-      font-size: 0.75rem;
+      font-size: 11px;
       color: var(--accent);
-      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: var(--heading);
+      margin-bottom: 40px;
+      letter-spacing: -0.01em;
     }
 
-    .tl-phase { font-weight: 600; color: var(--white); }
-    .tl-focus { color: var(--muted); font-size: 0.83rem; }
-
-    .tl-row:hover .tl-phase { color: var(--accent); }
-
-    /* ── SKILLS ── */
-    .skills-grid {
+    /* ── ABOUT ── */
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
     }
+    .about-text p { margin-bottom: 16px; color: var(--text); }
+    .about-text strong { color: var(--heading); }
 
-    .skill-block {
+    .stack-box {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.2rem 1.4rem;
+      border-radius: 8px;
+      padding: 28px;
     }
-
-    .skill-block h4 {
+    .stack-box h3 {
       font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 12px;
       color: var(--accent);
-      margin-bottom: 0.8rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .stack-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .stack-list li {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .stack-list li::before {
+      content: '◆';
+      font-size: 7px;
+      color: var(--accent);
     }
 
-    .skill-block p {
-      font-size: 0.82rem;
+    /* ── CASE FILES ── */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--accent);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.25s ease;
+    }
+    .case-card:hover { border-color: rgba(0,255,178,0.3); transform: translateY(-4px); }
+    .case-card:hover::before { transform: scaleY(1); }
+
+    .case-id {
+      font-family: var(--mono);
+      font-size: 11px;
       color: var(--muted);
-      line-height: 1.65;
+      letter-spacing: 0.15em;
+    }
+    .case-title {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.3;
+    }
+    .case-desc {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .tag {
+      background: rgba(0,255,178,0.07);
+      border: 1px solid rgba(0,255,178,0.18);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 3px;
+    }
+    .tag.blue {
+      background: rgba(14,126,255,0.08);
+      border-color: rgba(14,126,255,0.2);
+      color: var(--accent2);
+    }
+    .case-arrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .tl-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .tl-row:last-child { border-bottom: none; }
+    .tl-days {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      padding-top: 2px;
+    }
+    .tl-phase {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--heading);
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .tl-focus { color: var(--muted); font-size: 14px; }
+
+    /* ── SKILLS TABLE ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .skill-card h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 4px 12px;
+      font-size: 13px;
+      color: var(--text);
     }
 
     /* ── CERTS ── */
     .certs-list {
-      display: grid;
-      gap: 0.7rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
-
-    .cert-item {
+    .certs-list li a {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 14px;
+      padding: 18px 24px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.9rem 1.2rem;
+      border-radius: 6px;
       text-decoration: none;
-      transition: border-color 0.2s;
+      color: var(--text);
+      font-size: 14px;
+      transition: border-color 0.2s, color 0.2s;
     }
-
-    .cert-item:hover { border-color: var(--amber); }
-
+    .certs-list li a:hover { border-color: rgba(0,255,178,0.3); color: var(--heading); }
     .cert-icon {
-      font-size: 1.1rem;
+      font-size: 18px;
       flex-shrink: 0;
     }
-
-    .cert-name {
-      font-size: 0.85rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .cert-item:hover .cert-name { color: var(--amber); }
-
-    /* ── REPO STRUCTURE ── */
-    .repo-tree {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem 1.8rem;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 2;
-      overflow-x: auto;
-    }
-
-    .repo-tree .folder { color: var(--amber); }
-    .repo-tree .file   { color: var(--text); }
-    .repo-tree .note   { color: var(--muted); font-style: italic; }
 
     /* ── CONTACT ── */
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 16px;
     }
-
-    .contact-item {
-      display: flex;
+    .contact-link {
+      display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
+      gap: 10px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.9rem 1.4rem;
+      border-radius: 6px;
+      padding: 14px 24px;
       text-decoration: none;
-      color: var(--text);
-      font-size: 0.85rem;
-      transition: border-color 0.2s;
-    }
-
-    .contact-item:hover { border-color: var(--accent); color: var(--accent); }
-
-    .contact-label {
       font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      display: block;
-      margin-bottom: 0.1rem;
+      font-size: 13px;
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
     }
+    .contact-link:hover { border-color: rgba(0,255,178,0.4); color: var(--accent); }
 
-    /* ── DIVIDER ── */
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--border);
+    /* ── REPO STRUCTURE ── */
+    .repo-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
     }
+    .repo-box pre {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.9;
+      overflow-x: auto;
+    }
+    .repo-box pre a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .repo-box pre a:hover { text-decoration: underline; }
 
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 2rem;
+      padding: 32px 0;
       text-align: center;
+    }
+    footer p {
       font-family: var(--mono);
-      font-size: 0.68rem;
+      font-size: 12px;
       color: var(--muted);
       letter-spacing: 0.06em;
     }
-
-    footer a {
-      color: var(--accent2);
-      text-decoration: none;
-    }
+    footer a { color: var(--accent); text-decoration: none; }
 
     /* ── BACK TO TOP ── */
     .back-top {
-      display: inline-block;
-      margin-top: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-family: var(--mono);
-      font-size: 0.68rem;
+      font-size: 11px;
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.1em;
-      text-transform: uppercase;
+      margin-top: 40px;
       transition: color 0.2s;
     }
-
     .back-top:hover { color: var(--accent); }
 
-    .repo-tree a { text-decoration: none; }
-    .repo-tree a:hover .folder { color: var(--accent); }
-    .repo-tree a:hover .file   { color: var(--accent); text-decoration: underline; }
-
-    .nav-gh {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--accent2);
-      border: 1px solid rgba(47,190,159,0.4);
-      padding: 0.25rem 0.75rem;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: background 0.2s;
-      margin-left: 0.8rem;
-    }
-
-    .nav-gh:hover { background: rgba(47,190,159,0.12); }
-
     /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      nav ul { display: none; }
-      .tl-row { grid-template-columns: 60px 1fr; }
-      .tl-row .tl-cell:last-child { display: none; }
-      .hero h1 { font-size: 1.6rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+    @media (max-width: 720px) {
+      .about-grid, .cases-grid, .skills-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav id="top">
-  <div class="nav-brand">
-    <span>// </span>ARVIN PAUL GAPUZ<span> · SOC</span>
+  <div class="container">
+    <a class="nav-logo" href="#top">APG // SOC PORTFOLIO</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#cases">Cases</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certs">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#cases">Cases</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certs">Certs</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://github.com/arvinpaulhgapuz/portfolio" target="_blank" rel="noopener" class="nav-gh">GitHub ↗</a>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <header class="hero">
-  <div class="hero-badge">🛡️ SOC Analyst Portfolio</div>
-  <h1><span class="shield">&gt;_</span> ARVIN PAUL GAPUZ</h1>
-  <div class="hero-sub">// 15-Day Self-Directed Training Lab</div>
-  <p>SIEM Threat Detection · Network Forensics · Honeypot Threat Intelligence · Incident Response</p>
-  <div class="badge-row">
-    <span class="badge badge-green">open to work</span>
-    <span class="badge badge-amber">SIEM · Splunk</span>
-    <span class="badge badge-blue">Network · Wireshark</span>
-    <span class="badge badge-gray">Lab · Kali Linux</span>
-    <span class="badge badge-gray">MIT Docs</span>
+  <div class="container">
+    <div class="hero-eyebrow">SOC Analyst Portfolio</div>
+    <h1>Arvin Paul<br><span>Gapuz</span></h1>
+    <p class="hero-sub">
+      Aspiring SOC Analyst with 16 years of IT experience as a Systems Analyst, Programmer, and IT Manager — channeling a deep technical foundation into cybersecurity through a <strong>15-day self-directed training lab</strong> covering SIEM, Network Forensics, Honeypot Threat Intelligence, and Incident Response.
+    </p>
+    <div class="badges">
+      <span class="badge green"><span class="dot"></span> Open to Work</span>
+      <span class="badge">SIEM · Splunk</span>
+      <span class="badge">Network · Wireshark</span>
+      <span class="badge">Lab · Kali Linux</span>
+      <span class="badge">Docs · MIT</span>
+    </div>
+    <a class="hero-cta" href="https://arvinpaulhgapuz.github.io/portfolio/" target="_blank" rel="noopener">
+      ↗ View Live Site
+    </a>
   </div>
-  <div class="hero-live">🔗 Live site: <a href="https://arvinpaulhgapuz.github.io/portfolio/" target="_blank">arvinpaulhgapuz.github.io/portfolio</a> &nbsp;·&nbsp; <a href="https://github.com/arvinpaulhgapuz/portfolio" target="_blank">GitHub Repo ↗</a></div>
 </header>
 
-<!-- ── ABOUT ── -->
-<section class="section" id="about">
-  <div class="section-label">// profile</div>
-  <div class="section-title">About</div>
-  <div class="about-card">
-    <p>Aspiring SOC Analyst with <strong style="color:var(--white)">16 years of IT experience</strong> as a Systems Analyst, Programmer, and IT Manager. After stepping away from hands-on IT, I'm channeling that foundation into <strong style="color:var(--accent)">cybersecurity</strong> — building detection and response skills through hands-on, self-driven projects. Bringing real-world IT experience and a <strong style="color:var(--accent2)">security-first mindset</strong> to my next role.</p>
-    <p class="stack-label"><strong>Lab stack:</strong> Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · Honeypot tool · Ticketing platform</p>
-  </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
-</section>
-
-<hr class="section-divider" />
-
-<!-- ── CASES ── -->
-<section class="section" id="cases">
-  <div class="section-label">// incident files</div>
-  <div class="section-title">Case Files</div>
-  <div class="cases-grid">
-
-    <!-- CASE 001 -->
-    <div class="case-card">
-      <div class="case-id">CASE-001</div>
-      <div class="case-title">SIEM Threat Detection &amp; Dashboard Build</div>
-      <div class="case-tags">
-        <span class="case-tag">Detection &amp; Monitoring</span>
-        <span class="case-tag">Splunk Enterprise</span>
-        <span class="case-tag">BOTSv2 Dataset</span>
-        <span class="case-tag">SPL</span>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">// PROFILE</div>
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          After <strong>16 years in IT</strong> — spanning systems analysis, programming, and IT management — I'm now directing that hard-won experience toward cybersecurity. This portfolio documents a hands-on, self-driven lab program designed to build detection and response skills from the ground up, using the same categories of tooling found in real SOC environments.
+        </p>
+        <p>
+          Each case file in this portfolio mirrors a real SOC workflow stage: detection, incident response, network forensics, and adversary intelligence. Treat it as evidence of initiative and practical hands-on capability going into entry-level SOC and security operations roles.
+        </p>
+        <p>
+          🔗 <strong>Live site:</strong> <a href="https://arvinpaulhgapuz.github.io/portfolio/" target="_blank" rel="noopener" style="color:var(--accent2);">arvinpaulhgapuz.github.io/portfolio</a>
+        </p>
+        <a href="#top" class="back-top">↑ Back to top</a>
       </div>
-      <div class="case-status"><span class="status-dot"></span>Status: Documented</div>
-      <p class="case-objective">Stand up a working SIEM environment and turn raw security logs into actionable visual monitoring, using Boss of the SOC v2 — an industry-standard dataset simulating a real breach.</p>
-      <h4>What I did:</h4>
-      <ul>
-        <li>Ingested and explored the BOTSv2 dataset in Splunk, learning its index and sourcetype structure before writing any searches.</li>
-        <li>Wrote SPL queries to surface indicators of compromise — suspicious authentication activity, anomalous process execution, unusual DNS query patterns.</li>
-        <li>Designed and built Splunk dashboards from scratch: panels, visualizations, and time-range controls for fast environment health reads.</li>
-        <li>Rehearsed the dashboard as a live demo, practicing how to walk a non-technical audience through each panel.</li>
-      </ul>
-      <div class="skills-line"><span>Skills:</span> SPL query writing · log correlation · dashboard design · technical presenting</div>
-      <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/01-splunk-siem-monitoring/01-splunk-siem-monitoring-README.md" target="_blank" rel="noopener" class="evidence-link">📁 /01-splunk-siem-monitoring →</a>
-    </div>
-
-    <!-- CASE 002 -->
-    <div class="case-card">
-      <div class="case-id">CASE-002</div>
-      <div class="case-title">Incident Triage, Ticketing &amp; Reporting</div>
-      <div class="case-tags">
-        <span class="case-tag">Incident Response</span>
-        <span class="case-tag">Ticketing Platform</span>
+      <div class="stack-box">
+        <h3>// Lab Stack</h3>
+        <ul class="stack-list">
+          <li>Splunk Enterprise</li>
+          <li>BOTSv2 Dataset</li>
+          <li>Wireshark</li>
+          <li>Kali Linux</li>
+          <li>Honeypot Tool</li>
+          <li>Ticketing Platform</li>
+        </ul>
       </div>
-      <div class="case-status"><span class="status-dot"></span>Status: Documented</div>
-      <p class="case-objective">Practice the part of SOC work that happens after detection — deciding what matters, tracking it, and writing it up the way a real analyst hands a case off to the next shift.</p>
-      <h4>What I did:</h4>
-      <ul>
-        <li>Logged alerts and findings from Splunk dashboard work as tickets, rather than leaving them as one-off searches.</li>
-        <li>Practiced triage: assigning priority and severity based on asset criticality, likelihood, and potential business impact.</li>
-        <li>Wrote structured incident reports for higher-priority cases — summary, timeline, IoCs, and recommended remediation.</li>
-        <li>Treated documentation as a deliverable in itself.</li>
-      </ul>
-      <div class="skills-line"><span>Skills:</span> alert triage · prioritization · ticketing workflows · incident report writing</div>
-      <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/02-incident-response/02-incident-response-README.md" target="_blank" rel="noopener" class="evidence-link">📁 /02-incident-response →</a>
-    </div>
-
-    <!-- CASE 003 -->
-    <div class="case-card">
-      <div class="case-id">CASE-003</div>
-      <div class="case-title">Network Traffic &amp; Packet Analysis</div>
-      <div class="case-tags">
-        <span class="case-tag">Network Forensics</span>
-        <span class="case-tag">Wireshark</span>
-      </div>
-      <div class="case-status"><span class="status-dot"></span>Status: Documented</div>
-      <p class="case-objective">Build the habit of reading raw network traffic instead of trusting summaries.</p>
-      <h4>What I did:</h4>
-      <ul>
-        <li>Captured and analyzed live and saved traffic in Wireshark, reading the protocol hierarchy before drilling into individual frames.</li>
-        <li>Used display filters to isolate specific conversations and suspicious patterns — unexpected ports, plaintext credentials, repeated connection attempts.</li>
-        <li>Followed TCP streams end-to-end to reconstruct what happened in a session.</li>
-        <li>Compared baseline "normal" traffic against anomalous captures.</li>
-      </ul>
-      <div class="skills-line"><span>Skills:</span> packet analysis · Wireshark filters · traffic baselining · anomaly identification</div>
-      <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/03-wireshark-traffic-analysis//03-wireshark-traffic-analysis-README.md" target="_blank" rel="noopener" class="evidence-link">📁 /03-wireshark-traffic-analysis →</a>
-    </div>
-
-    <!-- CASE 004 -->
-    <div class="case-card">
-      <div class="case-id">CASE-004</div>
-      <div class="case-title">Honeypot Deployment &amp; Threat Intelligence</div>
-      <div class="case-tags">
-        <span class="case-tag">Adversary Intelligence</span>
-        <span class="case-tag">Kali Linux</span>
-        <span class="case-tag">Honeypot</span>
-      </div>
-      <div class="case-status"><span class="status-dot"></span>Status: Documented</div>
-      <p class="case-objective">Get a firsthand look at what automated attackers actually do, by giving them something to attack inside a safely isolated home lab.</p>
-      <h4>What I did:</h4>
-      <ul>
-        <li>Built and isolated a home lab network segment so the honeypot could be exposed without putting other devices at risk.</li>
-        <li>Deployed a honeypot on Kali Linux to passively log connection attempts, credentials tried, and commands run.</li>
-        <li>Reviewed resulting logs for patterns — common usernames/passwords attempted, scanning behavior, follow-on actions.</li>
-        <li>Cross-referenced honeypot activity with Wireshark captures of the same traffic.</li>
-      </ul>
-      <div class="skills-line"><span>Skills:</span> honeypot configuration · network segmentation · log analysis · attacker TTP identification</div>
-      <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md" target="_blank" rel="noopener" class="evidence-link">📁 /04-kali-honeypot-homelab →</a>
-    </div>
-
-  </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
-</section>
-
-<hr class="section-divider" />
-
-<!-- ── TIMELINE ── -->
-<section class="section" id="timeline">
-  <div class="section-label">// schedule</div>
-  <div class="section-title">15-Day Program Timeline</div>
-  <div class="timeline">
-    <div class="tl-row header">
-      <div class="tl-cell">Days</div>
-      <div class="tl-cell">Phase</div>
-      <div class="tl-cell">Focus</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">1–2</div>
-      <div class="tl-cell tl-phase">Foundations</div>
-      <div class="tl-cell tl-focus">Cybersecurity awareness, threat landscape, lab environment setup</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">3–6</div>
-      <div class="tl-cell tl-phase">SIEM Monitoring</div>
-      <div class="tl-cell tl-focus">Splunk setup, BOTSv2 ingestion, SPL practice, dashboard build, live demo</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">7–9</div>
-      <div class="tl-cell tl-phase">Network Forensics</div>
-      <div class="tl-cell tl-focus">Wireshark capture/filter practice, baseline vs. anomaly comparison</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">10–12</div>
-      <div class="tl-cell tl-phase">Adversary Lab</div>
-      <div class="tl-cell tl-focus">Kali Linux honeypot deployment, network isolation, log collection</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">13–14</div>
-      <div class="tl-cell tl-phase">Incident Response</div>
-      <div class="tl-cell tl-focus">Ticketing workflow, triage practice, incident report writing</div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-cell tl-days">15</div>
-      <div class="tl-cell tl-phase">Wrap-Up</div>
-      <div class="tl-cell tl-focus">Portfolio documentation, demo rehearsal, lessons learned</div>
     </div>
   </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
 </section>
 
-<hr class="section-divider" />
+<!-- CASE FILES -->
+<section id="cases">
+  <div class="container">
+    <div class="section-label">// INVESTIGATIONS</div>
+    <h2 class="section-title">Case Files</h2>
+    <div class="cases-grid">
 
-<!-- ── SKILLS ── -->
-<section class="section" id="skills">
-  <div class="section-label">// capabilities</div>
-  <div class="section-title">Skill Set</div>
-  <div class="skills-grid">
-    <div class="skill-block">
-      <h4>Detection &amp; Monitoring</h4>
-      <p>Splunk · SPL · dashboard design · log correlation</p>
+      <!-- CASE 001 -->
+      <a class="case-card" href="./01-splunk-siem-monitoring/01-splunk-siem-monitoring-README.md">
+        <div class="case-id">CASE-001 · Detection &amp; Monitoring</div>
+        <div class="case-title">SIEM Threat Detection &amp; Dashboard Build</div>
+        <div class="case-desc">
+          Stand up a working SIEM environment and turn raw security logs into actionable visual monitoring using the Boss of the SOC v2 dataset — an industry-standard simulation of a real breach. Wrote SPL queries, built dashboards from scratch, and rehearsed live demos for non-technical audiences.
+        </div>
+        <div class="case-tags">
+          <span class="tag">Splunk Enterprise</span>
+          <span class="tag">BOTSv2</span>
+          <span class="tag">SPL</span>
+          <span class="tag blue">Documented ✓</span>
+        </div>
+        <div class="case-arrow">→ View evidence folder</div>
+      </a>
+
+      <!-- CASE 002 -->
+      <a class="case-card" href="./02-incident-response/02-incident-response-README.md">
+        <div class="case-id">CASE-002 · Incident Response</div>
+        <div class="case-title">Incident Triage, Ticketing &amp; Reporting</div>
+        <div class="case-desc">
+          Practice the part of SOC work that happens after detection — deciding what matters, tracking it in tickets, and writing it up the way a real analyst hands a case off to the next shift. Structured incident reports covering summary, timeline, IOCs, and remediation.
+        </div>
+        <div class="case-tags">
+          <span class="tag">Ticketing Platform</span>
+          <span class="tag">IR Workflow</span>
+          <span class="tag blue">Documented ✓</span>
+        </div>
+        <div class="case-arrow">→ View evidence folder</div>
+      </a>
+
+      <!-- CASE 003 -->
+      <a class="case-card" href="./03-wireshark-traffic-analysis/03-wireshark-traffic-analysis-README.md">
+        <div class="case-id">CASE-003 · Network Forensics</div>
+        <div class="case-title">Network Traffic &amp; Packet Analysis</div>
+        <div class="case-desc">
+          Build the habit of reading raw network traffic instead of trusting summaries. Captured and analyzed live and saved traffic in Wireshark, followed TCP streams end-to-end, and compared baseline "normal" traffic against anomalous captures.
+        </div>
+        <div class="case-tags">
+          <span class="tag">Wireshark</span>
+          <span class="tag">PCAP</span>
+          <span class="tag">TCP Forensics</span>
+          <span class="tag blue">Documented ✓</span>
+        </div>
+        <div class="case-arrow">→ View evidence folder</div>
+      </a>
+
+      <!-- CASE 004 -->
+      <a class="case-card" href="./04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md">
+        <div class="case-id">CASE-004 · Adversary Intelligence</div>
+        <div class="case-title">Honeypot Deployment &amp; Threat Intelligence</div>
+        <div class="case-desc">
+          Get a firsthand look at what automated attackers actually do by giving them something to attack inside a safely isolated home lab. Deployed a honeypot on Kali Linux, logged credentials tried, commands run, and cross-referenced activity with Wireshark captures of the same traffic.
+        </div>
+        <div class="case-tags">
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Honeypot</span>
+          <span class="tag">TTP Analysis</span>
+          <span class="tag blue">Documented ✓</span>
+        </div>
+        <div class="case-arrow">→ View evidence folder</div>
+      </a>
+
     </div>
-    <div class="skill-block">
-      <h4>Network Forensics</h4>
-      <p>Wireshark · protocol analysis · PCAP review · TCP stream reconstruction</p>
+    <a href="#top" class="back-top">↑ Back to top</a>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">// SCHEDULE</div>
+    <h2 class="section-title">15-Day Program Timeline</h2>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-days">Days 1–2</div>
+        <div>
+          <div class="tl-phase">Foundations</div>
+          <div class="tl-focus">Cybersecurity awareness, threat landscape, lab environment setup</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-days">Days 3–6</div>
+        <div>
+          <div class="tl-phase">SIEM Monitoring</div>
+          <div class="tl-focus">Splunk setup, BOTSv2 ingestion, SPL practice, dashboard build, live demo</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-days">Days 7–9</div>
+        <div>
+          <div class="tl-phase">Network Forensics</div>
+          <div class="tl-focus">Wireshark capture/filter practice, baseline vs. anomaly comparison</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-days">Days 10–12</div>
+        <div>
+          <div class="tl-phase">Adversary Lab</div>
+          <div class="tl-focus">Kali Linux honeypot deployment, network isolation, log collection</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-days">Days 13–14</div>
+        <div>
+          <div class="tl-phase">Incident Response</div>
+          <div class="tl-focus">Ticketing workflow, triage practice, incident report writing</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-days">Day 15</div>
+        <div>
+          <div class="tl-phase">Wrap-Up</div>
+          <div class="tl-focus">Portfolio documentation, demo rehearsal, lessons learned</div>
+        </div>
+      </div>
     </div>
-    <div class="skill-block">
-      <h4>Lab &amp; Linux Ops</h4>
-      <p>Kali Linux · honeypot deployment · network segmentation · Linux CLI</p>
+    <a href="#top" class="back-top">↑ Back to top</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">// CAPABILITIES</div>
+    <h2 class="section-title">Skill Set</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Detection &amp; Monitoring</h3>
+        <div class="skill-pills">
+          <span class="pill">Splunk</span>
+          <span class="pill">SPL</span>
+          <span class="pill">Dashboard Design</span>
+          <span class="pill">Log Correlation</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Network Forensics</h3>
+        <div class="skill-pills">
+          <span class="pill">Wireshark</span>
+          <span class="pill">Protocol Analysis</span>
+          <span class="pill">PCAP Review</span>
+          <span class="pill">TCP Stream Reconstruction</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Lab &amp; Linux Ops</h3>
+        <div class="skill-pills">
+          <span class="pill">Kali Linux</span>
+          <span class="pill">Honeypot Deployment</span>
+          <span class="pill">Network Segmentation</span>
+          <span class="pill">Linux CLI</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>IR &amp; Communication</h3>
+        <div class="skill-pills">
+          <span class="pill">Alert Triage</span>
+          <span class="pill">Ticketing</span>
+          <span class="pill">Incident Reports</span>
+          <span class="pill">Stakeholder Demos</span>
+        </div>
+      </div>
     </div>
-    <div class="skill-block">
-      <h4>IR &amp; Communication</h4>
-      <p>Triage · ticketing · incident reports · stakeholder demos</p>
+    <a href="#top" class="back-top">↑ Back to top</a>
+  </div>
+</section>
+
+<!-- REPO STRUCTURE -->
+<section id="repo">
+  <div class="container">
+    <div class="section-label">// REPOSITORY</div>
+    <h2 class="section-title">Repo Structure</h2>
+    <div class="repo-box">
+      <pre>
+soc-analyst-portfolio/
+├── <a href="./README.md">README.md</a>
+├── <a href="./01-splunk-siem-monitoring/">01-splunk-siem-monitoring/</a>
+│   ├── <a href="./01-splunk-siem-monitoring/01-splunk-siem-monitoring-README.md">README.md</a>          # write-up of approach + findings
+│   ├── <a href="./01-splunk-siem-monitoring/spl-queries.md">spl-queries.md</a>     # SPL queries, commented
+│   └── <a href="./01-splunk-siem-monitoring/screenshots/">screenshots/</a>       # dashboard panels, search results
+├── <a href="./02-incident-response/">02-incident-response/</a>
+│   ├── <a href="./02-incident-response/02-incident-response-README.md">README.md</a>
+│   ├── <a href="./02-incident-response/incident-report-template.md">incident-report-template.md</a>
+│   └── <a href="./02-incident-response/sample-tickets.md">sample-tickets.md</a>
+├── <a href="./03-wireshark-traffic-analysis/">03-wireshark-traffic-analysis/</a>
+│   ├── <a href="./03-wireshark-traffic-analysis/03-wireshark-traffic-analysis-README.md">README.md</a>
+│   ├── <a href="./03-wireshark-traffic-analysis/pcap-findings.md">pcap-findings.md</a>   # filters used + what they revealed
+│   └── <a href="./03-wireshark-traffic-analysis/screenshots/">screenshots/</a>
+├── <a href="./04-kali-honeypot-homelab/">04-kali-honeypot-homelab/</a>
+│   ├── <a href="./04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md">README.md</a>
+│   ├── <a href="./04-kali-honeypot-homelab/network-diagram.png">network-diagram.png</a>  # lab isolation diagram
+│   └── <a href="./04-kali-honeypot-homelab/attack-log-analysis.md">attack-log-analysis.md</a>
+└── <a href="./assets/">assets/</a>
+    └── <a href="./assets/screenshots/">screenshots/</a>
+      </pre>
     </div>
+    <a href="#top" class="back-top">↑ Back to top</a>
   </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
 </section>
 
-<hr class="section-divider" />
-
-<!-- ── REPO STRUCTURE ── -->
-<section class="section" id="repo">
-  <div class="section-label">// repository</div>
-  <div class="section-title">Repo Structure</div>
-  <div class="repo-tree">
-<a href="https://github.com/arvinpaulhgapuz/portfolio" target="_blank" rel="noopener"><span class="folder">portfolio/</span></a><br>
-├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/README.md" target="_blank" rel="noopener"><span class="file">README.md</span></a><br>
-├── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/01-splunk-siem-monitoring" target="_blank" rel="noopener"><span class="folder">01-splunk-siem-monitoring/</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/01-splunk-siem-monitoring/01-splunk-siem-monitoring-README.md" target="_blank" rel="noopener"><span class="file">README.md</span></a>           <span class="note"># write-up of approach + findings</span><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/01-splunk-siem-monitoring/spl-queries.md" target="_blank" rel="noopener"><span class="file">spl-queries.md</span></a>      <span class="note"># your actual SPL queries, commented</span><br>
-│&nbsp;&nbsp;&nbsp;└── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/01-splunk-siem-monitoring/screenshots" target="_blank" rel="noopener"><span class="folder">screenshots/</span></a>         <span class="note"># dashboard panels, search results</span><br>
-├── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/02-incident-response" target="_blank" rel="noopener"><span class="folder">02-incident-response/</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/02-incident-response/02-incident-response-README.md" target="_blank" rel="noopener"><span class="file">README.md</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/02-incident-response/incident-report-template.md" target="_blank" rel="noopener"><span class="file">incident-report-template.md</span></a><br>
-│&nbsp;&nbsp;&nbsp;└── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/02-incident-response/sample-tickets.md" target="_blank" rel="noopener"><span class="file">sample-tickets.md</span></a><br>
-├── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/03-wireshark-traffic-analysis" target="_blank" rel="noopener"><span class="folder">03-wireshark-traffic-analysis/</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/03-wireshark-traffic-analysis/03-wireshark-traffic-analysis-README.md" target="_blank" rel="noopener"><span class="file">README.md</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/03-wireshark-traffic-analysis/pcap-findings.md" target="_blank" rel="noopener"><span class="file">pcap-findings.md</span></a>    <span class="note"># filters used + what they revealed</span><br>
-│&nbsp;&nbsp;&nbsp;└── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/03-wireshark-traffic-analysis/screenshots" target="_blank" rel="noopener"><span class="folder">screenshots/</span></a><br>
-├── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/04-kali-honeypot-homelab" target="_blank" rel="noopener"><span class="folder">04-kali-honeypot-homelab/</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/04-kali-honeypot-homelab/04-kali-honeypot-homelab-README.md" target="_blank" rel="noopener"><span class="file">README.md</span></a><br>
-│&nbsp;&nbsp;&nbsp;├── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/04-kali-honeypot-homelab/network-diagram.png" target="_blank" rel="noopener"><span class="file">network-diagram.png</span></a>  <span class="note"># how the lab was isolated</span><br>
-│&nbsp;&nbsp;&nbsp;└── <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/04-kali-honeypot-homelab/attack-log-analysis.md" target="_blank" rel="noopener"><span class="file">attack-log-analysis.md</span></a><br>
-└── <a href="https://github.com/arvinpaulhgapuz/portfolio/tree/main/assets/screenshots" target="_blank" rel="noopener"><span class="folder">assets/screenshots/</span></a>
+<!-- CERTIFICATES -->
+<section id="certs">
+  <div class="container">
+    <div class="section-label">// CREDENTIALS</div>
+    <h2 class="section-title">Certificates &amp; Achievements</h2>
+    <ul class="certs-list">
+      <li>
+        <a href="./skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk_README.md">
+          <span class="cert-icon">🛡️</span>
+          CISCO SOC Essentials — Investigating With Splunk
+        </a>
+      </li>
+      <li>
+        <a href="./skill-set/Fortinet_Certified_Fundamentals_Cybersecurity_README.md">
+          <span class="cert-icon">🔐</span>
+          Fortinet Certified Fundamentals in Cybersecurity
+        </a>
+      </li>
+      <li>
+        <a href="./skill-set/Fortinet_Certified_Introduction_Threat_Landscape_3.0_README.md">
+          <span class="cert-icon">🌐</span>
+          Fortinet Certified — Introduction to the Threat Landscape 3.0
+        </a>
+      </li>
+      <li>
+        <a href="./skill-set/Fortinet_Getting_Started_Cybersecurity_3.0_README.md">
+          <span class="cert-icon">🚀</span>
+          Fortinet — Getting Started in Cybersecurity 3.0
+        </a>
+      </li>
+    </ul>
+    <a href="#top" class="back-top">↑ Back to top</a>
   </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
 </section>
 
-<hr class="section-divider" />
-
-<!-- ── CERTS ── -->
-<section class="section" id="certs">
-  <div class="section-label">// credentials</div>
-  <div class="section-title">Certificates &amp; Achievements</div>
-  <div class="certs-list">
-    <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/skill-set/CISCO_SOC_Essentials_Investigating_With_Splunk_README.md" target="_blank" rel="noopener" class="cert-item">
-      <div class="cert-icon">🏅</div>
-      <div>
-        <span class="cert-label">CISCO</span>
-        <div class="cert-name">SOC Essentials — Investigating with Splunk</div>
-      </div>
-    </a>
-    <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/skill-set/Fortinet_Certified_Fundamentals_Cybersecurity_README.md" target="_blank" rel="noopener" class="cert-item">
-      <div class="cert-icon">🏅</div>
-      <div>
-        <span class="cert-label">FORTINET</span>
-        <div class="cert-name">Certified Fundamentals in Cybersecurity</div>
-      </div>
-    </a>
-    <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/skill-set/Fortinet_Certified_Introduction_Threat_Landscape_3.0_README.md" target="_blank" rel="noopener" class="cert-item">
-      <div class="cert-icon">🏅</div>
-      <div>
-        <span class="cert-label">FORTINET</span>
-        <div class="cert-name">Certified Introduction — Threat Landscape 3.0</div>
-      </div>
-    </a>
-    <a href="https://github.com/arvinpaulhgapuz/portfolio/blob/main/skill-set/Fortinet_Getting_Started_Cybersecurity_3.0_README.md" target="_blank" rel="noopener" class="cert-item">
-      <div class="cert-icon">🏅</div>
-      <div>
-        <span class="cert-label">FORTINET</span>
-        <div class="cert-name">Getting Started in Cybersecurity 3.0</div>
-      </div>
-    </a>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">// REACH OUT</div>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:arvinpaulhgapuz@gmail.com">
+        <span>✉</span> arvinpaulhgapuz@gmail.com
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/arvinpaulhgapuz" target="_blank" rel="noopener">
+        <span>💼</span> linkedin.com/in/arvinpaulhgapuz
+      </a>
+      <a class="contact-link" href="https://github.com/arvinpaulhgapuz" target="_blank" rel="noopener">
+        <span>⌨</span> github.com/arvinpaulhgapuz
+      </a>
+    </div>
+    <a href="#top" class="back-top">↑ Back to top</a>
   </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
 </section>
 
-<hr class="section-divider" />
-
-<!-- ── CONTACT ── -->
-<section class="section" id="contact">
-  <div class="section-label">// reach out</div>
-  <div class="section-title">Contact</div>
-  <div class="contact-grid">
-    <a href="mailto:arvinpaulhgapuz@gmail.com" class="contact-item">
-      <span style="font-size:1.1rem">✉️</span>
-      <div>
-        <span class="contact-label">EMAIL</span>
-        arvinpaulhgapuz@gmail.com
-      </div>
-    </a>
-    <a href="https://linkedin.com/in/arvinpaulhgapuz" target="_blank" class="contact-item">
-      <span style="font-size:1.1rem">🔗</span>
-      <div>
-        <span class="contact-label">LINKEDIN</span>
-        linkedin.com/in/arvinpaulhgapuz
-      </div>
-    </a>
-    <a href="https://github.com/arvinpaulhgapuz" target="_blank" class="contact-item">
-      <span style="font-size:1.1rem">💻</span>
-      <div>
-        <span class="contact-label">GITHUB</span>
-        github.com/arvinpaulhgapuz
-      </div>
-    </a>
-  </div>
-  <a href="#top" class="back-top">↑ Back to top</a>
-</section>
-
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
-  Built as part of a 15-day self-directed SOC training lab. &nbsp;·&nbsp;
-  © 2026 <a href="#top">ARVIN PAUL GAPUZ</a> &nbsp;·&nbsp; MIT License
+  <div class="container">
+    <p>Built as part of a 15-day self-directed SOC training lab. &copy; 2026 <a href="#top">Arvin Paul Gapuz</a>.</p>
+  </div>
 </footer>
 
 </body>
